@@ -22,7 +22,7 @@
     "electron-store": "^7.0.1",
     "electron-window-state": "^5.0.2",
     "rimraf": "^3.0.0",
-    "tslint": "^6.0.0",
+    "eslint": "^7.0.0",
     "typescript": "^4.0.2"
   },
   "devDependencies": {
@@ -46,7 +46,7 @@
     "build": "tsc && yarn run assets && electron-builder --publish=never",
     "ci": "yarn run compile && tsc && yarn run lint && yarn run build",
     "compile": "rimraf app/out",
-    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint": "eslint",
     "package": "yarn run build",
     "postinstall": "electron-builder install-app-deps",
     "start": "tsc && electron ./dist/main.js",
